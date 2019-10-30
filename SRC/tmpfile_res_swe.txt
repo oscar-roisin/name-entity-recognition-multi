@@ -1,0 +1,6 @@
+1	Ken	Ken	PM	PM	NOM	_	_	_	_	B	person	tmpfile_swe:0:0
+2	tycker	tycka	VB	VB	PRS|AKT	_	_	_	_	O	_	tmpfile_swe:0:4
+3	inte	inte	AB	AB	_	_	_	_	_	O	_	tmpfile_swe:0:11
+4	om	om	PL	PL	_	_	_	_	_	O	_	tmpfile_swe:0:16
+5	Sverige	Sverige	PM	PM	NOM	_	_	_	_	B	place	tmpfile_swe:0:19
+
