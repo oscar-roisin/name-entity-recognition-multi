@@ -1,2 +1,4 @@
 TAGGERS/stagger/models/swedish.bin
 */.ipynb_checkpoints/*
+.vscode/*
+/TAGGERS/neural-network/*.h5
