@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/bin"
+CMD="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/cmd"
+LIB="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/lib"
+
+OPTIONS="-token -lemma -sgml"
+
+TOKENIZER=${CMD}/utf8-tokenize.perl
+TAGGER=${BIN}/tree-tagger
+ABBR_LIST=${LIB}/english-abbreviations
+PARFILE=${LIB}/english.par
+
+$TOKENIZER -e -a $ABBR_LIST $* |
+# remove empty lines
+grep -v '^$' |
+# tagging
+$TAGGER $OPTIONS $PARFILE | 
+perl -pe 's/\tV[BDHV]/\tVB/;s/\tIN\/that/\tIN/;'

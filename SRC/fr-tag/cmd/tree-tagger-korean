@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/bin"
+CMD="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/cmd"
+LIB="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/lib"
+
+OPTIONS="-token -lemma -sgml"
+
+TAGGER=${BIN}/tree-tagger
+TOKENIZER=${CMD}/tokenize-korean.pl
+PARFILE=${LIB}/korean.par
+
+$TOKENIZER $* |
+$TAGGER $OPTIONS $PARFILE |
+$CMD/add-korean-sentence-markers.pl |
+$CMD/reformat-korean-tagger-output.pl

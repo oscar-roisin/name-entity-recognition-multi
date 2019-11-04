@@ -1,0 +1,10 @@
+Je	NOM/B-NP
+m´	NOM/I-NP
+appelle	NOM/I-NP
+Oscar	NOM/I-NP
+et	NOM/I-NP
+j´	NOM/I-NP
+ai	NOM/I-NP
+deux	NOM/I-NP
+chiens	NOM/I-NP
+.	NOM/I-NP

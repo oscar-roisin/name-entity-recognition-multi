@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/bin"
+CMD="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/cmd"
+LIB="/home/ken/Gandalf/name-entity-recognition-multi/SRC/fr-tag/lib"
+
+OPTIONS="-token -lemma -sgml"
+
+TOKENIZER=${CMD}/utf8-tokenize.perl
+MWL=${CMD}/greek-mwls.pl
+TAGGER=${BIN}/tree-tagger
+ABBR_LIST=${LIB}/greek-abbreviations
+PARFILE=${LIB}/greek.par
+
+$TOKENIZER -a $ABBR_LIST $* |
+$MWL |
+# tagging
+$TAGGER $OPTIONS $PARFILE
+
