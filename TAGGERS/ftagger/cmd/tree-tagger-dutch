@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN="/home/oscar/MALV/name-entity-recognition-multi/TAGGERS/bin"
+CMD="/home/oscar/MALV/name-entity-recognition-multi/TAGGERS/cmd"
+LIB="/home/oscar/MALV/name-entity-recognition-multi/TAGGERS/lib"
+
+OPTIONS="-token -lemma -sgml"
+
+TAGGER=${BIN}/tree-tagger
+TOKENIZER=${CMD}/utf8-tokenize.perl
+ABBR_LIST=${LIB}/dutch-abbreviations
+PARFILE=${LIB}/dutch.par
+
+$TOKENIZER -a $ABBR_LIST $* |
+$TAGGER $OPTIONS $PARFILE
