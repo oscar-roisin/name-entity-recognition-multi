@@ -1,0 +1,25 @@
+There are two different ML methods (CRF and LSTM) implemented separately. 
+
+#################
+CRF instructions:
+#################
+The easiest way to just run a quick example is to go into the CRF/ directory
+and run 'python NER_ENG.py' or the language of your choice. 
+
+Note: NER_FR.py only works after the tagger in 'fr-tag' have been installed
+on the desired system following the instruction in the fr-tag/ directory. This
+is due to system specific hardcoded paths added on installation (e.g. /home/{user}/...).
+
+
+To get more insight into what is going on behind the scenes the NER.ipynb can
+be opened and run for each of the languages. (Change language by editing
+the 'DATA_TESTED = eng_data' last in 'Read and Analyse Data' to e.g. 'swe_data')
+
+After all cells above 'Train model' has been run, the model for the current language
+can be loaded from a pickle by using the last cell, if one does not want to wait 
+a couple of minutes to train the model again.
+
+
+##################
+LSTM instructions:
+##################
