@@ -1,0 +1,39 @@
+ENG:
+Labels:['OTHER', 'ORG', 'LOC', 'PRS']
+              precision    recall  f1-score   support
+
+         LOC      0.842     0.899     0.870      4542
+         ORG      0.803     0.758     0.779      3683
+         PRS      0.846     0.862     0.854      3387
+       OTHER      0.938     0.842     0.888      4613
+
+   micro avg      0.859     0.843     0.851     16225
+   macro avg      0.857     0.840     0.848     16225
+weighted avg      0.861     0.843     0.851     16225
+
+
+Swedish:
+Labels:['ORG', 'PRS', 'LOC', 'OTHER']
+              precision    recall  f1-score   support
+
+         LOC      0.809     0.723     0.764      1229
+         ORG      0.635     0.425     0.509       647
+         PRS      0.812     0.907     0.857      2452
+       OTHER      0.581     0.232     0.331       509
+
+   micro avg      0.784     0.724     0.753      4837
+   macro avg      0.710     0.572     0.615      4837
+weighted avg      0.764     0.724     0.731      4837
+
+French:
+Labels:['PRS', 'LOC', 'OTHER', 'ORG']
+              precision    recall  f1-score   support
+
+         LOC      0.803     0.837     0.820     15250
+         ORG      0.774     0.636     0.698      4720
+         PRS      0.860     0.898     0.879     13279
+       OTHER      0.755     0.564     0.646      8299
+
+   micro avg      0.813     0.779     0.796     41548
+   macro avg      0.798     0.734     0.761     41548
+weighted avg      0.808     0.779     0.790     41548
